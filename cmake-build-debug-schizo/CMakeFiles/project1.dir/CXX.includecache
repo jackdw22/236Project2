@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/tmp.hdEnjsrOUt/Automaton.h
+Token.h
+/tmp/tmp.hdEnjsrOUt/Token.h
+
+/tmp/tmp.hdEnjsrOUt/Token.h
+string
+-
+
+/tmp/tmp.hdEnjsrOUt/invalidComment.cpp
+iostream
+-
+invalidComment.h
+/tmp/tmp.hdEnjsrOUt/invalidComment.h
+
+/tmp/tmp.hdEnjsrOUt/invalidComment.h
+Automaton.h
+/tmp/tmp.hdEnjsrOUt/Automaton.h
+
