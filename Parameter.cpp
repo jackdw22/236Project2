@@ -3,3 +3,7 @@
 //
 
 #include "Parameter.h"
+
+Parameter::Parameter(std::string para) {
+    this->para = para;
+}

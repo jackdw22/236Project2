@@ -57,4 +57,6 @@ add_executable(project1
         Rule.cpp
         Rule.h
         Predicate.cpp
-        Predicate.h Parameter.cpp Parameter.h)
+        Predicate.h
+        Parameter.cpp
+        Parameter.h)

@@ -7,6 +7,10 @@
 
 #include "Token.h"
 #include "Lexer.h"
+#include "Predicate.h"
+#include "Rule.h"
+#include "DatalogProgram.h"
+#include "Parameter.h"
 #include <vector>
 #include <iostream>
 #include <string>
@@ -49,6 +53,19 @@ public:
     Parser();
 
     void Parse(std::vector<Token*> tokens);
+    int getIndex(){
+        return index;
+    }
+    std::string getTypeList(){
+        return typeList;
+    }
+    void setIndex(int number){
+        index = number;
+        return;
+    }
+    void setTypeList(std::string type){
+        typeList = type;
+    }
 };
 
 

@@ -4,10 +4,18 @@
 
 #ifndef RULE_H
 #define RULE_H
+#include "Predicate.h"
+#include <iostream>
+#include <vector>
+#include <string>
 
 
 class Rule {
-
+private:
+    Predicate* headPredicate;
+    std::vector<Predicate*> bodyPredicates;
+public:
+    Rule(Predicate* headPredicate,  std::vector<Predicate*> bodyPredicates);
 };
 
 

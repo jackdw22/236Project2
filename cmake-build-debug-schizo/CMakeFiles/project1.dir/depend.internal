@@ -31,6 +31,12 @@ CMakeFiles/project1.dir/CommentAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/CommentAutomaton.cpp
  /tmp/tmp.hdEnjsrOUt/CommentAutomaton.h
  /tmp/tmp.hdEnjsrOUt/Token.h
+CMakeFiles/project1.dir/DatalogProgram.cpp.o
+ /tmp/tmp.hdEnjsrOUt/DatalogProgram.cpp
+ /tmp/tmp.hdEnjsrOUt/DatalogProgram.h
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
+ /tmp/tmp.hdEnjsrOUt/Predicate.h
+ /tmp/tmp.hdEnjsrOUt/Rule.h
 CMakeFiles/project1.dir/FactsAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/FactsAutomaton.cpp
@@ -80,17 +86,28 @@ CMakeFiles/project1.dir/MultiplyAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/MultiplyAutomaton.cpp
  /tmp/tmp.hdEnjsrOUt/MultiplyAutomaton.h
  /tmp/tmp.hdEnjsrOUt/Token.h
+CMakeFiles/project1.dir/Parameter.cpp.o
+ /tmp/tmp.hdEnjsrOUt/Parameter.cpp
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
 CMakeFiles/project1.dir/Parser.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
+ /tmp/tmp.hdEnjsrOUt/DatalogProgram.h
  /tmp/tmp.hdEnjsrOUt/Lexer.h
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
  /tmp/tmp.hdEnjsrOUt/Parser.cpp
  /tmp/tmp.hdEnjsrOUt/Parser.h
+ /tmp/tmp.hdEnjsrOUt/Predicate.h
+ /tmp/tmp.hdEnjsrOUt/Rule.h
  /tmp/tmp.hdEnjsrOUt/Token.h
 CMakeFiles/project1.dir/PeriodAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/PeriodAutomaton.cpp
  /tmp/tmp.hdEnjsrOUt/PeriodAutomaton.h
  /tmp/tmp.hdEnjsrOUt/Token.h
+CMakeFiles/project1.dir/Predicate.cpp.o
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
+ /tmp/tmp.hdEnjsrOUt/Predicate.cpp
+ /tmp/tmp.hdEnjsrOUt/Predicate.h
 CMakeFiles/project1.dir/QMarkAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/QMarkAutomaton.cpp
@@ -106,6 +123,11 @@ CMakeFiles/project1.dir/RightParenAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/RightParenAutomaton.cpp
  /tmp/tmp.hdEnjsrOUt/RightParenAutomaton.h
  /tmp/tmp.hdEnjsrOUt/Token.h
+CMakeFiles/project1.dir/Rule.cpp.o
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
+ /tmp/tmp.hdEnjsrOUt/Predicate.h
+ /tmp/tmp.hdEnjsrOUt/Rule.cpp
+ /tmp/tmp.hdEnjsrOUt/Rule.h
 CMakeFiles/project1.dir/RulesAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/RulesAutomaton.cpp
@@ -126,8 +148,12 @@ CMakeFiles/project1.dir/invalidComment.cpp.o
  /tmp/tmp.hdEnjsrOUt/invalidComment.h
 CMakeFiles/project1.dir/main.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
+ /tmp/tmp.hdEnjsrOUt/DatalogProgram.h
  /tmp/tmp.hdEnjsrOUt/Lexer.h
+ /tmp/tmp.hdEnjsrOUt/Parameter.h
  /tmp/tmp.hdEnjsrOUt/Parser.h
+ /tmp/tmp.hdEnjsrOUt/Predicate.h
+ /tmp/tmp.hdEnjsrOUt/Rule.h
  /tmp/tmp.hdEnjsrOUt/Token.h
  /tmp/tmp.hdEnjsrOUt/main.cpp
 CMakeFiles/project1.dir/schemesAutomaton.cpp.o

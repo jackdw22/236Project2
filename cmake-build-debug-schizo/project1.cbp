@@ -165,6 +165,12 @@
 		<Unit filename="/tmp/tmp.hdEnjsrOUt/MultiplyAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/Parameter.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/Parameter.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.hdEnjsrOUt/Parser.cpp">
 			<Option target="project1"/>
 		</Unit>

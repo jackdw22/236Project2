@@ -10,9 +10,11 @@ Parser::Parser() {
 }
 
 void Parser::Parse(std::vector<Token *> tokens) {
+    DatalogProgram* Datalog = new DatalogProgram();
     try {
 
-        if (tokens.at(index)->tokenToString(tokens.at(index)->type) == "SCHEMES") {
+        if (tokens.at(index)->tokenToString(tokens.at(index)->type) == "SCHEMES"){
+            Datalog->datalogParse();
             Schemes(tokens);
         }else{
             throw (505);
@@ -56,6 +58,10 @@ void Parser::COLON(std::vector<Token *> tokens) {
     try {
 
         if (tokens.at(index)->tokenToString(tokens.at(index)->type) == "ID") {
+            Predicate* Predicate = new class Predicate(tokens.at(index)->getValue());
+            if (typeList == "Schemes"){
+
+            }
             ID(tokens);
         }else if(tokens.at(index)->tokenToString(tokens.at(index)->type) == "RULES") {
             RULES(tokens);

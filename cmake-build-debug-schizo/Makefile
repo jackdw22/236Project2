@@ -474,6 +474,33 @@ MultiplyAutomaton.cpp.s:
 	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/MultiplyAutomaton.cpp.s
 .PHONY : MultiplyAutomaton.cpp.s
 
+Parameter.o: Parameter.cpp.o
+
+.PHONY : Parameter.o
+
+# target to build an object file
+Parameter.cpp.o:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parameter.cpp.o
+.PHONY : Parameter.cpp.o
+
+Parameter.i: Parameter.cpp.i
+
+.PHONY : Parameter.i
+
+# target to preprocess a source file
+Parameter.cpp.i:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parameter.cpp.i
+.PHONY : Parameter.cpp.i
+
+Parameter.s: Parameter.cpp.s
+
+.PHONY : Parameter.s
+
+# target to generate assembly for a file
+Parameter.cpp.s:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parameter.cpp.s
+.PHONY : Parameter.cpp.s
+
 Parser.o: Parser.cpp.o
 
 .PHONY : Parser.o
@@ -873,6 +900,9 @@ help:
 	@echo "... MultiplyAutomaton.o"
 	@echo "... MultiplyAutomaton.i"
 	@echo "... MultiplyAutomaton.s"
+	@echo "... Parameter.o"
+	@echo "... Parameter.i"
+	@echo "... Parameter.s"
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"

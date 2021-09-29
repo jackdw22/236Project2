@@ -7,6 +7,10 @@ Token::Token(TokenType type, std::string description, int line) {
     this->lineNumber = line;
 }
 
+std::string Token::getValue() {
+    return value;
+}
+
 std::string Token::tokenToString(TokenType type) {
     switch(type){
         case TokenType::COLON:
