@@ -30,14 +30,17 @@ private:
     // TODO: add member variables for information needed by Token
     std::string value;
     int lineNumber;
-    TokenType type;
-    std::string tokenToString(TokenType type);
 
 public:
     Token(TokenType type, std::string description, int line);
 
     // TODO: add other needed methods
     std:: string print();
+
+
+    std::string tokenToString(TokenType type);
+
+    TokenType type;
 };
 
 #endif // TOKEN_H

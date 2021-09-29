@@ -49,4 +49,7 @@ add_executable(project1
         BlockCommentAutomata.cpp
         BlockCommentAutomata.h
         invalidComment.cpp
-        invalidComment.h)
+        invalidComment.h
+        Parser.cpp
+        Parser.h
+        )

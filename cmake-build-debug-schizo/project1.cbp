@@ -159,6 +159,18 @@
 		<Unit filename="/tmp/tmp.hdEnjsrOUt/MultiplyAutomaton.h">
 			<Option target="project1"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/Parser.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/Parser.h">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/ParserHelper.cpp">
+			<Option target="project1"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.hdEnjsrOUt/ParserHelper.h">
+			<Option target="project1"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.hdEnjsrOUt/PeriodAutomaton.cpp">
 			<Option target="project1"/>
 		</Unit>

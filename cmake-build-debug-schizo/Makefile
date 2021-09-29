@@ -447,6 +447,60 @@ MultiplyAutomaton.cpp.s:
 	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/MultiplyAutomaton.cpp.s
 .PHONY : MultiplyAutomaton.cpp.s
 
+Parser.o: Parser.cpp.o
+
+.PHONY : Parser.o
+
+# target to build an object file
+Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parser.cpp.o
+.PHONY : Parser.cpp.o
+
+Parser.i: Parser.cpp.i
+
+.PHONY : Parser.i
+
+# target to preprocess a source file
+Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parser.cpp.i
+.PHONY : Parser.cpp.i
+
+Parser.s: Parser.cpp.s
+
+.PHONY : Parser.s
+
+# target to generate assembly for a file
+Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/Parser.cpp.s
+.PHONY : Parser.cpp.s
+
+ParserHelper.o: ParserHelper.cpp.o
+
+.PHONY : ParserHelper.o
+
+# target to build an object file
+ParserHelper.cpp.o:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/ParserHelper.cpp.o
+.PHONY : ParserHelper.cpp.o
+
+ParserHelper.i: ParserHelper.cpp.i
+
+.PHONY : ParserHelper.i
+
+# target to preprocess a source file
+ParserHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/ParserHelper.cpp.i
+.PHONY : ParserHelper.cpp.i
+
+ParserHelper.s: ParserHelper.cpp.s
+
+.PHONY : ParserHelper.s
+
+# target to generate assembly for a file
+ParserHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/ParserHelper.cpp.s
+.PHONY : ParserHelper.cpp.s
+
 PeriodAutomaton.o: PeriodAutomaton.cpp.o
 
 .PHONY : PeriodAutomaton.o
@@ -762,6 +816,12 @@ help:
 	@echo "... MultiplyAutomaton.o"
 	@echo "... MultiplyAutomaton.i"
 	@echo "... MultiplyAutomaton.s"
+	@echo "... Parser.o"
+	@echo "... Parser.i"
+	@echo "... Parser.s"
+	@echo "... ParserHelper.o"
+	@echo "... ParserHelper.i"
+	@echo "... ParserHelper.s"
 	@echo "... PeriodAutomaton.o"
 	@echo "... PeriodAutomaton.i"
 	@echo "... PeriodAutomaton.s"

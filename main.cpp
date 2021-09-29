@@ -1,4 +1,5 @@
 #include "Lexer.h"
+#include "Parser.h"
 #include <string>
 #include <vector>
 #include <iostream>
@@ -14,6 +15,7 @@ int main(int argc, char** argv) {
 
 
     Lexer* lexer = new Lexer();
+    Parser* parser = new Parser();
 
 
     // TODO
@@ -42,7 +44,11 @@ int main(int argc, char** argv) {
 
     lexer->Run(inputString);
 
+    parser->Parse(lexer->getToken());
+
+
     delete lexer;
+    delete parser;
 
 
 

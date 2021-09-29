@@ -80,6 +80,16 @@ CMakeFiles/project1.dir/MultiplyAutomaton.cpp.o: ../MultiplyAutomaton.cpp
 CMakeFiles/project1.dir/MultiplyAutomaton.cpp.o: ../MultiplyAutomaton.h
 CMakeFiles/project1.dir/MultiplyAutomaton.cpp.o: ../Token.h
 
+CMakeFiles/project1.dir/Parser.cpp.o: ../Automaton.h
+CMakeFiles/project1.dir/Parser.cpp.o: ../Lexer.h
+CMakeFiles/project1.dir/Parser.cpp.o: ../Parser.cpp
+CMakeFiles/project1.dir/Parser.cpp.o: ../Parser.h
+CMakeFiles/project1.dir/Parser.cpp.o: ../ParserHelper.h
+CMakeFiles/project1.dir/Parser.cpp.o: ../Token.h
+
+CMakeFiles/project1.dir/ParserHelper.cpp.o: ../ParserHelper.cpp
+CMakeFiles/project1.dir/ParserHelper.cpp.o: ../ParserHelper.h
+
 CMakeFiles/project1.dir/PeriodAutomaton.cpp.o: ../Automaton.h
 CMakeFiles/project1.dir/PeriodAutomaton.cpp.o: ../PeriodAutomaton.cpp
 CMakeFiles/project1.dir/PeriodAutomaton.cpp.o: ../PeriodAutomaton.h
@@ -120,6 +130,8 @@ CMakeFiles/project1.dir/invalidComment.cpp.o: ../invalidComment.h
 
 CMakeFiles/project1.dir/main.cpp.o: ../Automaton.h
 CMakeFiles/project1.dir/main.cpp.o: ../Lexer.h
+CMakeFiles/project1.dir/main.cpp.o: ../Parser.h
+CMakeFiles/project1.dir/main.cpp.o: ../ParserHelper.h
 CMakeFiles/project1.dir/main.cpp.o: ../Token.h
 CMakeFiles/project1.dir/main.cpp.o: ../main.cpp
 

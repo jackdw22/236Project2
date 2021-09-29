@@ -94,7 +94,9 @@ void Lexer::Run(std::string& input) {
             Token* newToken;
             newToken = maxAuto->CreateToken(input.substr(0, maxRead), lineNumber);
             lineNumber = lineNumber + maxAuto->NewLinesRead();
-            tokens.push_back(newToken);
+            if(newToken->tokenToString(newToken->type) != "COMMENT"){
+                tokens.push_back(newToken);
+            }
 
         }else if (input.size() > 0){
             maxRead = 1;
@@ -108,11 +110,12 @@ void Lexer::Run(std::string& input) {
     Token * newToken = new Token(TokenType::ENDFILE, "", lineNumber);
     tokens.push_back(newToken);
 
-    for(int i = 0; i < static_cast<int>(tokens.size()); i++){
+   /* for(int i = 0; i < static_cast<int>(tokens.size()); i++){
         std::cout << tokens.at(i)->print() << "\n";
     }
 
     std::cout << "Total Tokens = " << tokens.size();
+    */
 
     /*
     set lineNumber to 1
@@ -152,3 +155,4 @@ void Lexer::Run(std::string& input) {
     add end of file token to all tokens
     */
 }
+
