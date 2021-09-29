@@ -9,11 +9,13 @@
 #include "Lexer.h"
 #include <vector>
 #include <iostream>
+#include <string>
 
 
 class Parser {
 private:
     int index;
+    std::string typeList;
 
     void Schemes(std::vector<Token*> tokens);
     void COLON(std::vector<Token*> tokens);
@@ -30,6 +32,15 @@ private:
     void rule(std::vector<Token*> tokens);
     void headPredicate(std::vector<Token*> tokens);
     void ID(std::vector<Token*> tokens);
+    void COMMA(std::vector<Token*> tokens);
+    void STRING(std::vector<Token*> tokens);
+    void stringList(std::vector<Token*> tokens);
+    void PERIOD(std::vector<Token*> tokens);
+    void COLON_DASH(std::vector<Token*> tokens);
+    void parameter(std::vector<Token*> tokens);
+    void QUERIES(std::vector<Token*> tokens);
+    void Q_MARK(std::vector<Token*> tokens);
+    void ENDFILE(std::vector<Token*> tokens);
 
     // keep adding the rest of these lol
 

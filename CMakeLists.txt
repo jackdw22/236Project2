@@ -52,4 +52,9 @@ add_executable(project1
         invalidComment.h
         Parser.cpp
         Parser.h
-        )
+        DatalogProgram.cpp
+        DatalogProgram.h
+        Rule.cpp
+        Rule.h
+        Predicate.cpp
+        Predicate.h Parameter.cpp Parameter.h)

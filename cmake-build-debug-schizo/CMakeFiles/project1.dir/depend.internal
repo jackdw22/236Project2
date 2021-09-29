@@ -85,11 +85,7 @@ CMakeFiles/project1.dir/Parser.cpp.o
  /tmp/tmp.hdEnjsrOUt/Lexer.h
  /tmp/tmp.hdEnjsrOUt/Parser.cpp
  /tmp/tmp.hdEnjsrOUt/Parser.h
- /tmp/tmp.hdEnjsrOUt/ParserHelper.h
  /tmp/tmp.hdEnjsrOUt/Token.h
-CMakeFiles/project1.dir/ParserHelper.cpp.o
- /tmp/tmp.hdEnjsrOUt/ParserHelper.cpp
- /tmp/tmp.hdEnjsrOUt/ParserHelper.h
 CMakeFiles/project1.dir/PeriodAutomaton.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/PeriodAutomaton.cpp
@@ -132,7 +128,6 @@ CMakeFiles/project1.dir/main.cpp.o
  /tmp/tmp.hdEnjsrOUt/Automaton.h
  /tmp/tmp.hdEnjsrOUt/Lexer.h
  /tmp/tmp.hdEnjsrOUt/Parser.h
- /tmp/tmp.hdEnjsrOUt/ParserHelper.h
  /tmp/tmp.hdEnjsrOUt/Token.h
  /tmp/tmp.hdEnjsrOUt/main.cpp
 CMakeFiles/project1.dir/schemesAutomaton.cpp.o
