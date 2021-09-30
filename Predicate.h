@@ -16,9 +16,10 @@
 class Predicate {
 private:
     std::vector<Parameter*> parameters;
+    std::string type;
 
 public:
-    Predicate(std::string name);
+    Predicate(std::string name, std::string type);
     void addParameter(Parameter*);
     void predicateParse(std::vector<Token*>& tokens);
     void LEFT_PAREN(std::vector<Token*>& tokens);

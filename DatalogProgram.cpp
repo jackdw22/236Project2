@@ -194,7 +194,7 @@ void DatalogProgram::COLON(std::vector<Token *> &tokens) {
     try {
 
         if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
-            Predicate* Predicate = new class Predicate(tokens.at(0)->getValue());
+            Predicate* Predicate = new class Predicate(tokens.at(0)->getValue(), typeList);
             if(typeList == "Schemes"){
                 schemes.push_back(Predicate);
                 Predicate->predicateParse(tokens);
@@ -237,7 +237,7 @@ void DatalogProgram::endPredicate(std::vector<Token *> &tokens) {
     try {
 
         if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
-            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), typeList);
             if(typeList == "Schemes"){
                 schemes.push_back(Predicate);
             }else if(typeList == "Facts"){
@@ -282,12 +282,12 @@ void DatalogProgram::PERIOD(std::vector<Token *> &tokens) {
             QUERIES(tokens);
         }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
             if (typeList == "Facts") {
-                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), typeList);
                 facts.push_back(Predicate);
                 Predicate->predicateParse(tokens);
                 endPredicate(tokens);
             }else if(typeList == "Rules"){
-                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), typeList);
                 Rule *Rule = new class Rule(Predicate);
                 rules.push_back(Rule);
                 Predicate->predicateParse(tokens);
@@ -320,7 +320,7 @@ void DatalogProgram::Q_MARK(std::vector<Token *> &tokens) {
             return;
         }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
             if (typeList == "Queries") {
-                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), typeList);
                 queries.push_back(Predicate);
                 Predicate->predicateParse(tokens);
                 endPredicate(tokens);

@@ -4,8 +4,9 @@
 
 #include "Predicate.h"
 
-Predicate::Predicate(std::string name) {
+Predicate::Predicate(std::string name, std::string type) {
     this->namePredicate = name;
+    this->type = type; 
 }
 
 std::string Predicate::getParameters() {
@@ -47,9 +48,10 @@ void Predicate::predicateParse(std::vector<Token *>& tokens) {
 
 void Predicate::LEFT_PAREN(std::vector<Token *> &tokens) {
     tokens.erase(tokens.begin());
-    try {
+    try {// todo make sure that it is not a string when its in scheme and vice versa
 
-        if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID" || tokens.at(0)->tokenToString(tokens.at(0)->type) == "STRING") {
+
+        if ((tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID" && type != "Facts" )|| (tokens.at(0)->tokenToString(tokens.at(0)->type) == "STRING" && type != "Schemes")) {
            Parameter* para = new Parameter(tokens.at(0)->getValue());
            parameters.push_back(para);
            parameter(tokens);

@@ -28,7 +28,7 @@ void Rule::ruleParser(std::vector<Token *>& tokens) {
     try {
 
         if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
-            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), "Rules");
             bodyPredicates.push_back(Predicate);
             Predicate->predicateParse(tokens);
             ID(tokens);
@@ -49,7 +49,7 @@ void Rule::COMMA(std::vector<Token *>& tokens) {
     try {
 
         if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
-            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+            Predicate *Predicate = new class Predicate(tokens.at(0)->getValue(), "Rules");
             bodyPredicates.push_back(Predicate);
             Predicate->predicateParse(tokens);
             ID(tokens);

@@ -1,5 +1,5 @@
 Schemes:
-   snap(S,N,A,P)
+   snap('S',N,A,P)
    csg(C,S,G)
    cp(C,Q)
    cdh(C,D,H)
