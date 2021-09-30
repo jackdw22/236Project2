@@ -29,7 +29,7 @@ std::string DatalogProgram::datalogOutput(){
 
 std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
     std::string output = "";
-    for (int i = 0; i <  static_cast<int>(predicates.size()); i++){
+    for (int i = 0; i < static_cast<int>(predicates.size()); i++){
         output += "  " + predicates.at(i)->namePredicate + "(";
         output += predicates.at(i)->getParameters();
         output += ")\n";
@@ -38,7 +38,7 @@ std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
 }
 std::string DatalogProgram::factsOutput(std::vector<Predicate*> predicates) {
     std::string output = "";
-    for (int i = 0; static_cast<int>(predicates.size()); i++){
+    for (int i = 0; i < static_cast<int>(predicates.size()); i++){
         output += "  " + predicates.at(i)->namePredicate + "(";
         output += predicates.at(i)->getParameters();
         output += ").\n";
@@ -120,6 +120,7 @@ void DatalogProgram::Schemes(std::vector<Token *>& tokens) {
         std::cout << "Failure!" << std::endl;
         std::cout << "  " << tokens.at(0)->print();
         exit(0);
+        // TODO make it print the bad token with spaces <3
     }
 
     return;

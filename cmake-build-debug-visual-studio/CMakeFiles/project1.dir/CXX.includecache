@@ -10,6 +10,10 @@ C:/Users/james/cs236/236Project2/Automaton.h
 Token.h
 C:/Users/james/cs236/236Project2/Token.h
 
+C:/Users/james/cs236/236Project2/DatalogProgram.cpp
+DatalogProgram.h
+C:/Users/james/cs236/236Project2/DatalogProgram.h
+
 C:/Users/james/cs236/236Project2/DatalogProgram.h
 Rule.h
 C:/Users/james/cs236/236Project2/Rule.h
@@ -45,10 +49,6 @@ string
 -
 iostream
 -
-
-C:/Users/james/cs236/236Project2/Parser.cpp
-Parser.h
-C:/Users/james/cs236/236Project2/Parser.h
 
 C:/Users/james/cs236/236Project2/Parser.h
 Token.h
