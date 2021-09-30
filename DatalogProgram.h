@@ -11,6 +11,8 @@
 #include "Parser.h"
 #include <iostream>
 #include <vector>
+#include <set>
+#include <stdlib.h>
 
 class DatalogProgram {
 private:
@@ -19,6 +21,7 @@ private:
     std::vector<Predicate*> schemes;
     std::vector<Predicate*> queries;
     std::string typeList;
+    std::set<std::string> domain;
 
 public:
     DatalogProgram();
@@ -34,6 +37,10 @@ public:
     std::string datalogOutput();
     std::string schemesOutput(std::vector<Predicate*> predicates);
     std::string rulesOutput();
+    std::string printDomain();
+    std::string factsOutput(std::vector<Predicate*> predicates);
+    std::string queriesOutput(std::vector<Predicate*> predicates);
+
 
 
 };

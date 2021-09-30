@@ -11,7 +11,15 @@ std::string Rule::ruleOutput() {
     std::string output = "";
     output += headPredicate->namePredicate + "(";
     output += headPredicate->getParameters() + ")";
-
+    output += " :- ";
+    for (int i = 0; i < bodyPredicates.size() - 1; i++){
+        output += bodyPredicates.at(i)->namePredicate + "(";
+        output += bodyPredicates.at(i)->getParameters();
+        output += "),";
+    }
+    output += bodyPredicates.at(bodyPredicates.size() - 1)->namePredicate + "(";
+    output += bodyPredicates.at(bodyPredicates.size() - 1)->getParameters();
+    output += ").\n";
     return output;
 }
 
@@ -30,8 +38,8 @@ void Rule::ruleParser(std::vector<Token *>& tokens) {
     }
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Rule Parser" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -52,8 +60,8 @@ void Rule::COMMA(std::vector<Token *>& tokens) {
     }
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Rule Parser COMMA" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -72,8 +80,8 @@ void Rule::ID(std::vector<Token *>& tokens) {
     }
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Rule Parser PERIOD" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }

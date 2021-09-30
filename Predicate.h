@@ -10,11 +10,13 @@
 #include <string>
 #include <Lexer.h>
 #include <Token.h>
+#include <set>
 
 
 class Predicate {
 private:
     std::vector<Parameter*> parameters;
+
 public:
     Predicate(std::string name);
     void addParameter(Parameter*);
@@ -25,8 +27,9 @@ public:
     void ID(std::vector<Token*>& tokens);
     void COMMA(std::vector<Token*>& tokens);
     std::string getParameters();
-
+    void getDomain();
     std::string namePredicate;
+    std::set<std::string> domains;
 };
 
 

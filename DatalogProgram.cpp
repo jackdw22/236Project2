@@ -4,20 +4,28 @@
 
 #include "DatalogProgram.h"
 DatalogProgram::DatalogProgram(){
-    std::cout << "Datalog was created" << std::endl;
     typeList = "";
 }
 
 std::string DatalogProgram::datalogOutput(){
-    std::string output = "";
+    std::string lazy = "";
+    std::string output = "Success!\n";
+
     output += "Schemes(" + std::to_string(schemes.size()) + "):\n";
-    output += schemesOutput(schemes) + "\n\n";
+    output += schemesOutput(schemes);
     output += "Facts(" + std::to_string(facts.size()) + "):\n";
-    output += schemesOutput(facts) + "\n\n";
+    output += factsOutput(facts);
     output += "Rules(" + std::to_string(rules.size()) + "):\n";
     output += rulesOutput();
+    output += "Queries(" + std::to_string(queries.size()) + "):\n";
+    output += queriesOutput(queries);
+    lazy += printDomain();
+    output += "Domain(" + std::to_string(domain.size()) + "):\n";
+    output += lazy;
     return output;
 }
+
+
 
 std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
     std::string output = "";
@@ -28,10 +36,50 @@ std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
     }
     return output;
 }
+std::string DatalogProgram::factsOutput(std::vector<Predicate*> predicates) {
+    std::string output = "";
+    for (int i = 0; i < predicates.size(); i++){
+        output += "  " + predicates.at(i)->namePredicate + "(";
+        output += predicates.at(i)->getParameters();
+        output += ").\n";
+    }
+    return output;
+}
+
+std::string DatalogProgram::queriesOutput(std::vector<Predicate *> predicates) {
+    std::string output = "";
+    for (int i = 0; i < predicates.size(); i++){
+        output += "  " + predicates.at(i)->namePredicate + "(";
+        output += predicates.at(i)->getParameters();
+        output += ")?\n";
+    }
+    return output;
+}
+
+
+std::string DatalogProgram::printDomain() {
+    std::string output;
+    for (int i = 0; i < facts.size(); i++){
+        facts.at(i)->getDomain();
+        std::set<std::string> :: iterator itr;
+        for (itr = facts.at(i)->domains.begin(); itr != facts.at(i)->domains.end(); itr++){
+            domain.insert(*itr);
+        }
+    }
+   std::set<std::string> :: iterator itr;
+   for (itr = domain.begin(); itr != domain.end(); itr++){
+       output += "  " + *itr + "\n";
+   }
+
+
+   return output;
+}
 
 std::string DatalogProgram::rulesOutput() {
     std::string output = "";
-    output += "  " + rules.at(0)->ruleOutput();
+    for (int i = 0; i < rules.size(); i++) {
+        output += "  " + rules.at(i)->ruleOutput();
+    }
     return output;
 }
 
@@ -70,9 +118,8 @@ void DatalogProgram::Schemes(std::vector<Token *>& tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Schemes" << std::endl;
-        // TODO make it print the bad token with spaces <3
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
 
     return;
@@ -91,9 +138,8 @@ void DatalogProgram::FACTS(std::vector<Token *> &tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Facts" << std::endl;
-        // TODO make it print the bad token with spaces <3
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
 
     return;
@@ -112,9 +158,8 @@ void DatalogProgram::RULES(std::vector<Token *> &tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Schemes" << std::endl;
-        // TODO make it print the bad token with spaces <3
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
 
     return;
@@ -134,9 +179,8 @@ void DatalogProgram::QUERIES(std::vector<Token *>& tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Schemes" << std::endl;
-        // TODO make it print the bad token with spaces <3
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
 
     return;
@@ -170,19 +214,19 @@ void DatalogProgram::COLON(std::vector<Token *> &tokens) {
                 Rule->ruleParser(tokens);
                 PERIOD(tokens);
             }
-            /* }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "RULES") {
+            }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "RULES") {
             RULES(tokens);
-        }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "QUERIES"){
+            }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "QUERIES"){
             QUERIES(tokens);
-       */ }else{
+            }else{
             throw (505);
         }
     }
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "COLON" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -223,8 +267,8 @@ void DatalogProgram::endPredicate(std::vector<Token *> &tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "End Predicate" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -241,6 +285,14 @@ void DatalogProgram::PERIOD(std::vector<Token *> &tokens) {
                 facts.push_back(Predicate);
                 Predicate->predicateParse(tokens);
                 endPredicate(tokens);
+            }else if(typeList == "Rules"){
+                Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
+                Rule *Rule = new class Rule(Predicate);
+                rules.push_back(Rule);
+                Predicate->predicateParse(tokens);
+                endPredicate(tokens);
+                Rule->ruleParser(tokens);
+                PERIOD(tokens);
             }
         }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "RULES"){
             RULES(tokens);
@@ -251,8 +303,8 @@ void DatalogProgram::PERIOD(std::vector<Token *> &tokens) {
 
     catch(...) {
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Period" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
 
     }
 
@@ -264,23 +316,24 @@ void DatalogProgram::Q_MARK(std::vector<Token *> &tokens) {
     try {
 
         if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "EOF") {
-            std::cout << "Success!" << std::endl;
+            return;
         }else if(tokens.at(0)->tokenToString(tokens.at(0)->type) == "ID") {
             if (typeList == "Queries") {
                 Predicate *Predicate = new class Predicate(tokens.at(0)->getValue());
-                facts.push_back(Predicate);
+                queries.push_back(Predicate);
                 Predicate->predicateParse(tokens);
                 endPredicate(tokens);
             }
         }else{
             throw (505);
+
         }
     }
 
     catch(...) {
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "Period" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
 
     }
 

@@ -29,6 +29,10 @@ iostream
 -
 vector
 -
+set
+-
+stdlib.h
+-
 
 C:/Users/james/cs236/236Project2/Lexer.h
 vector
@@ -45,10 +49,6 @@ string
 -
 iostream
 -
-
-C:/Users/james/cs236/236Project2/Parser.cpp
-Parser.h
-C:/Users/james/cs236/236Project2/Parser.h
 
 C:/Users/james/cs236/236Project2/Parser.h
 Token.h
@@ -83,10 +83,8 @@ Lexer.h
 -
 Token.h
 -
-
-C:/Users/james/cs236/236Project2/Rule.cpp
-Rule.h
-C:/Users/james/cs236/236Project2/Rule.h
+set
+-
 
 C:/Users/james/cs236/236Project2/Rule.h
 Predicate.h
@@ -104,21 +102,5 @@ C:/Users/james/cs236/236Project2/Token.h
 
 C:/Users/james/cs236/236Project2/Token.h
 string
--
-
-C:/Users/james/cs236/236Project2/main.cpp
-Lexer.h
-C:/Users/james/cs236/236Project2/Lexer.h
-Parser.h
-C:/Users/james/cs236/236Project2/Parser.h
-string
--
-vector
--
-iostream
--
-fstream
--
-sstream
 -
 

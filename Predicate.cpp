@@ -9,6 +9,7 @@ Predicate::Predicate(std::string name) {
 }
 
 std::string Predicate::getParameters() {
+
     std::string output = "";
         for (int i = 0; i < parameters.size() -1 ; i++){
             output +=  parameters.at(i)->getParameter() + ",";
@@ -16,6 +17,12 @@ std::string Predicate::getParameters() {
     output +=  parameters.at(parameters.size() - 1)->getParameter();
 
     return output;
+}
+
+void Predicate::getDomain() {
+    for (int i = 0; i < parameters.size() ; i++){
+        domains.insert(parameters.at(i)->getParameter());
+    }
 }
 
 
@@ -32,8 +39,8 @@ void Predicate::predicateParse(std::vector<Token *>& tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "ID" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -53,8 +60,8 @@ void Predicate::LEFT_PAREN(std::vector<Token *> &tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "LEFT_PAREN" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -74,8 +81,8 @@ void Predicate::parameter(std::vector<Token *>& tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "LEFT_PAREN" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
@@ -95,8 +102,8 @@ void Predicate::COMMA(std::vector<Token *> &tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(0)->print();
-        std::cout << "COMMA" << std::endl;
+        std::cout << "  " << tokens.at(0)->print();
+        exit(0);
     }
     return;
 }
