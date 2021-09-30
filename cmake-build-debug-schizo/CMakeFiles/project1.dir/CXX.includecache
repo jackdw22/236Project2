@@ -67,6 +67,12 @@ Rule.h
 /tmp/tmp.hdEnjsrOUt/Rule.h
 Predicate.h
 /tmp/tmp.hdEnjsrOUt/Predicate.h
+Token.h
+/tmp/tmp.hdEnjsrOUt/Token.h
+Lexer.h
+/tmp/tmp.hdEnjsrOUt/Lexer.h
+Parser.h
+/tmp/tmp.hdEnjsrOUt/Parser.h
 iostream
 -
 vector

@@ -7,7 +7,8 @@
 #include "Rule.h"
 #include "Predicate.h"
 #include "Token.h"
-#include "lexer.h"
+#include "Lexer.h"
+#include "Parser.h"
 #include <iostream>
 #include <vector>
 
@@ -17,13 +18,24 @@ private:
     std::vector<Predicate*> facts;
     std::vector<Predicate*> schemes;
     std::vector<Predicate*> queries;
+    std::string typeList;
 
 public:
     DatalogProgram();
-    void addPredicate(std::vector<Predicate*>& vPreds, Predicate* predicate);
-    void addRule(std::vector<Rule*>& vRules, Rule* rule);
-    void datalogParse(std::vector<Token*> tokens);
-    void
+    void datalogParse(std::vector<Token*>& tokens);
+    void Schemes(std::vector<Token*>& tokens);
+    void COLON(std::vector<Token*>& tokens);
+    void endPredicate(std::vector<Token*>& tokens);
+    void FACTS(std::vector<Token*>& tokens);
+    void QUERIES(std::vector<Token*> &tokens);
+    void PERIOD(std::vector<Token*> &tokens);
+    void RULES(std::vector<Token*> &tokens);
+    void Q_MARK(std::vector<Token*> &tokens);
+    std::string datalogOutput();
+    std::string schemesOutput(std::vector<Predicate*> predicates);
+    std::string rulesOutput();
+
+
 };
 
 

@@ -5,17 +5,15 @@
 #include "Parser.h"
 
 Parser::Parser() {
-    index = 0;
-    typeList = "";
+
 }
 
 void Parser::Parse(std::vector<Token *> tokens) {
     DatalogProgram* Datalog = new DatalogProgram();
     try {
 
-        if (tokens.at(index)->tokenToString(tokens.at(index)->type) == "SCHEMES"){
-            Datalog->datalogParse();
-            Schemes(tokens);
+        if (tokens.at(0)->tokenToString(tokens.at(0)->type) == "SCHEMES"){
+            Datalog->datalogParse(tokens);
         }else{
             throw (505);
         }
@@ -23,37 +21,14 @@ void Parser::Parse(std::vector<Token *> tokens) {
 
     catch(...){
         std::cout << "Failure!" << std::endl;
-        std::cout << "  " << tokens.at(index)->print();
+        std::cout << "  " << tokens.at(0)->print();
         std::cout << "Parse" << std::endl;
     }
-
+    std::cout << Datalog->datalogOutput();
     return;
 }
 
-void Parser::Schemes(std::vector<Token *> tokens) {
-    index++;
-    typeList = "Schemes";
-    try {
-
-        if (tokens.at(index)->tokenToString(tokens.at(index)->type) == "COLON") {
-            COLON(tokens);
-        }else{
-            throw (505);
-        }
-    }
-
-    catch(...){
-        std::cout << "Failure!" << std::endl;
-        std::cout << tokens.at(index)->print();
-        std::cout << "Schemes" << std::endl;
-        // TODO make it print the bad token with spaces <3
-    }
-
-    return;
-}
-
-
-void Parser::COLON(std::vector<Token *> tokens) {
+/*void Parser::COLON(std::vector<Token *> tokens) {
     index++;
     try {
 
@@ -307,7 +282,7 @@ void Parser::PERIOD(std::vector<Token *> tokens) {
     return;
 }
 
-void Parser::RULES(std::vector<Token *> tokens) {
+/*void Parser::RULES(std::vector<Token *> tokens) {
     index++;
     typeList = "Rules";
     try {
@@ -402,4 +377,4 @@ void Parser::Q_MARK(std::vector<Token *> tokens) {
 
 void Parser::ENDFILE(std::vector<Token *> tokens) {
     std::cout << "Success!" << std::endl;
-}
+}*/

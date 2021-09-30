@@ -8,6 +8,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Lexer.h"
+#include "Token.h"
 
 
 class Rule {
@@ -15,7 +17,11 @@ private:
     Predicate* headPredicate;
     std::vector<Predicate*> bodyPredicates;
 public:
-    Rule(Predicate* headPredicate,  std::vector<Predicate*> bodyPredicates);
+    Rule(Predicate* headPredicate);
+    void ruleParser(std::vector <Token*>& tokens);
+    void COMMA (std::vector <Token*>& tokens);
+    void ID (std::vector <Token*>& tokens);
+    std::string ruleOutput();
 };
 
 

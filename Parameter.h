@@ -14,7 +14,7 @@ private:
 
 public:
     Parameter(std::string para);
-
+    std::string getParameter();
 };
 
 

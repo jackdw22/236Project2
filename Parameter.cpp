@@ -7,3 +7,7 @@
 Parameter::Parameter(std::string para) {
     this->para = para;
 }
+
+std::string Parameter::getParameter() {
+    return para;
+}

@@ -31,11 +31,15 @@ CMakeFiles/project1.dir/CommentAutomaton.cpp.o: ../CommentAutomaton.cpp
 CMakeFiles/project1.dir/CommentAutomaton.cpp.o: ../CommentAutomaton.h
 CMakeFiles/project1.dir/CommentAutomaton.cpp.o: ../Token.h
 
+CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Automaton.h
 CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../DatalogProgram.cpp
 CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../DatalogProgram.h
+CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Lexer.h
 CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Parameter.h
+CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Parser.h
 CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Predicate.h
 CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Rule.h
+CMakeFiles/project1.dir/DatalogProgram.cpp.o: ../Token.h
 
 CMakeFiles/project1.dir/FactsAutomaton.cpp.o: ../Automaton.h
 CMakeFiles/project1.dir/FactsAutomaton.cpp.o: ../FactsAutomaton.cpp
