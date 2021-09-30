@@ -282,7 +282,7 @@ void Parser::PERIOD(std::vector<Token *> tokens) {
     return;
 }
 
-/*void Parser::RULES(std::vector<Token *> tokens) {
+void Parser::RULES(std::vector<Token *> tokens) {
     index++;
     typeList = "Rules";
     try {

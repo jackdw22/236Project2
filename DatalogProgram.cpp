@@ -29,7 +29,7 @@ std::string DatalogProgram::datalogOutput(){
 
 std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
     std::string output = "";
-    for (int i = 0; i < predicates.size(); i++){
+    for (int i = 0; i <  static_cast<int>(predicates.size()); i++){
         output += "  " + predicates.at(i)->namePredicate + "(";
         output += predicates.at(i)->getParameters();
         output += ")\n";
@@ -38,7 +38,7 @@ std::string DatalogProgram::schemesOutput(std::vector<Predicate*> predicates) {
 }
 std::string DatalogProgram::factsOutput(std::vector<Predicate*> predicates) {
     std::string output = "";
-    for (int i = 0; i < predicates.size(); i++){
+    for (int i = 0; static_cast<int>(predicates.size()); i++){
         output += "  " + predicates.at(i)->namePredicate + "(";
         output += predicates.at(i)->getParameters();
         output += ").\n";
@@ -48,7 +48,7 @@ std::string DatalogProgram::factsOutput(std::vector<Predicate*> predicates) {
 
 std::string DatalogProgram::queriesOutput(std::vector<Predicate *> predicates) {
     std::string output = "";
-    for (int i = 0; i < predicates.size(); i++){
+    for (int i = 0; i < static_cast<int>(predicates.size()); i++){
         output += "  " + predicates.at(i)->namePredicate + "(";
         output += predicates.at(i)->getParameters();
         output += ")?\n";
@@ -59,7 +59,7 @@ std::string DatalogProgram::queriesOutput(std::vector<Predicate *> predicates) {
 
 std::string DatalogProgram::printDomain() {
     std::string output;
-    for (int i = 0; i < facts.size(); i++){
+    for (int i = 0; i < static_cast<int>(facts.size()); i++){
         facts.at(i)->getDomain();
         std::set<std::string> :: iterator itr;
         for (itr = facts.at(i)->domains.begin(); itr != facts.at(i)->domains.end(); itr++){
@@ -77,7 +77,7 @@ std::string DatalogProgram::printDomain() {
 
 std::string DatalogProgram::rulesOutput() {
     std::string output = "";
-    for (int i = 0; i < rules.size(); i++) {
+    for (int i = 0; i < static_cast<int>(rules.size()); i++) {
         output += "  " + rules.at(i)->ruleOutput();
     }
     return output;

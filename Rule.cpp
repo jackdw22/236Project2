@@ -12,7 +12,7 @@ std::string Rule::ruleOutput() {
     output += headPredicate->namePredicate + "(";
     output += headPredicate->getParameters() + ")";
     output += " :- ";
-    for (int i = 0; i < bodyPredicates.size() - 1; i++){
+    for (int i = 0; i < static_cast<int>(bodyPredicates.size()) - 1; i++){
         output += bodyPredicates.at(i)->namePredicate + "(";
         output += bodyPredicates.at(i)->getParameters();
         output += "),";

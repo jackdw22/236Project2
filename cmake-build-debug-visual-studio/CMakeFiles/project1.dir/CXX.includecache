@@ -10,10 +10,6 @@ C:/Users/james/cs236/236Project2/Automaton.h
 Token.h
 C:/Users/james/cs236/236Project2/Token.h
 
-C:/Users/james/cs236/236Project2/DatalogProgram.cpp
-DatalogProgram.h
-C:/Users/james/cs236/236Project2/DatalogProgram.h
-
 C:/Users/james/cs236/236Project2/DatalogProgram.h
 Rule.h
 C:/Users/james/cs236/236Project2/Rule.h
@@ -74,10 +70,6 @@ iostream
 string
 -
 
-C:/Users/james/cs236/236Project2/Predicate.cpp
-Predicate.h
-C:/Users/james/cs236/236Project2/Predicate.h
-
 C:/Users/james/cs236/236Project2/Predicate.h
 Parameter.h
 C:/Users/james/cs236/236Project2/Parameter.h
@@ -89,12 +81,10 @@ string
 -
 Token.h
 C:/Users/james/cs236/236Project2/Token.h
+Lexer.h
+C:/Users/james/cs236/236Project2/Lexer.h
 set
 -
-
-C:/Users/james/cs236/236Project2/Rule.cpp
-Rule.h
-C:/Users/james/cs236/236Project2/Rule.h
 
 C:/Users/james/cs236/236Project2/Rule.h
 Predicate.h
@@ -112,21 +102,5 @@ C:/Users/james/cs236/236Project2/Token.h
 
 C:/Users/james/cs236/236Project2/Token.h
 string
--
-
-C:/Users/james/cs236/236Project2/main.cpp
-Lexer.h
-C:/Users/james/cs236/236Project2/Lexer.h
-Parser.h
-C:/Users/james/cs236/236Project2/Parser.h
-string
--
-vector
--
-iostream
--
-fstream
--
-sstream
 -
 

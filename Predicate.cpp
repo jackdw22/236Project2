@@ -11,7 +11,7 @@ Predicate::Predicate(std::string name) {
 std::string Predicate::getParameters() {
 
     std::string output = "";
-        for (int i = 0; i < parameters.size() -1 ; i++){
+        for (int i = 0; i < static_cast<int>(parameters.size()) -1 ; i++){
             output +=  parameters.at(i)->getParameter() + ",";
         }
     output +=  parameters.at(parameters.size() - 1)->getParameter();
@@ -20,7 +20,7 @@ std::string Predicate::getParameters() {
 }
 
 void Predicate::getDomain() {
-    for (int i = 0; i < parameters.size() ; i++){
+    for (int i = 0; i < static_cast<int>(parameters.size()) ; i++){
         domains.insert(parameters.at(i)->getParameter());
     }
 }
