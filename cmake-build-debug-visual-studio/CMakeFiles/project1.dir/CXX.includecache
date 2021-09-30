@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Automaton.h
-Token.h
-../Token.h
-
-../Lexer.h
-vector
--
-Automaton.h
-../Automaton.h
-Token.h
-../Token.h
-cctype
--
-
 ../Token.h
 string
 -
@@ -105,7 +91,7 @@ iostream
 -
 string
 -
-Lexer.h
+Token.h
 -
 set
 -
