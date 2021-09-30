@@ -109,10 +109,10 @@ CMakeFiles/project1.dir/PeriodAutomaton.cpp.obj
  C:/Users/james/cs236/236Project2/PeriodAutomaton.h
  C:/Users/james/cs236/236Project2/Token.h
 CMakeFiles/project1.dir/Predicate.cpp.obj
- ../Token.h
  C:/Users/james/cs236/236Project2/Parameter.h
  C:/Users/james/cs236/236Project2/Predicate.cpp
  C:/Users/james/cs236/236Project2/Predicate.h
+ C:/Users/james/cs236/236Project2/Token.h
 CMakeFiles/project1.dir/QMarkAutomaton.cpp.obj
  C:/Users/james/cs236/236Project2/Automaton.h
  C:/Users/james/cs236/236Project2/QMarkAutomaton.cpp

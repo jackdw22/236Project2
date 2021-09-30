@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Token.h
-string
--
-
 C:/Users/james/cs236/236Project2/Automaton.h
 Token.h
 C:/Users/james/cs236/236Project2/Token.h
@@ -92,7 +88,7 @@ iostream
 string
 -
 Token.h
--
+C:/Users/james/cs236/236Project2/Token.h
 set
 -
 

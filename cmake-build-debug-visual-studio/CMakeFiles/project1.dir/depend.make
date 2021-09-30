@@ -108,10 +108,10 @@ CMakeFiles\project1.dir\PeriodAutomaton.cpp.obj: ..\PeriodAutomaton.cpp
 CMakeFiles\project1.dir\PeriodAutomaton.cpp.obj: ..\PeriodAutomaton.h
 CMakeFiles\project1.dir\PeriodAutomaton.cpp.obj: ..\Token.h
 
-CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Token.h
 CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Parameter.h
 CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Predicate.cpp
 CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Predicate.h
+CMakeFiles\project1.dir\Predicate.cpp.obj: ..\Token.h
 
 CMakeFiles\project1.dir\QMarkAutomaton.cpp.obj: ..\Automaton.h
 CMakeFiles\project1.dir\QMarkAutomaton.cpp.obj: ..\QMarkAutomaton.cpp

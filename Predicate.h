@@ -8,7 +8,8 @@
 #include <vector>
 #include <iostream>
 #include <string>
-#include <Token.h>
+#include "Token.h"
+#include "Lexer.h"
 #include <set>
 
 
